@@ -63,6 +63,8 @@ def checkIfWin(board, char):
   #diagonal
   elif (board[2]==char and board[4]==char and board[6]==char):
     return True
+  elif (board[0]==char and board[4]==char and board[8]==char):
+    return True
   else:
     return False
 
@@ -85,7 +87,7 @@ while(1):
     if compInput(board, boardPosList):
       print("Computer Won")
       boardPrint(board)
-      
+      print("-------------------")
       break
     print("after computer input")
     boardPrint(board)
